@@ -23,7 +23,7 @@ def max_2_sum arr
         max_2 = elem
       end
     end
-    sum = max_1+max_2
+    sum = max_1 + max_2
   elsif arr.length == 1
     return arr[0]
   else return 0
@@ -37,7 +37,7 @@ def sum_to_n? arr, n
   if arr.length == 0
     return false
   else
-    if arr.combination(2).any? {|a,b| a+b == n}
+    if arr.combination(2).any? {|a, b| a + b == n}
       return true
     else
       return false
@@ -79,7 +79,7 @@ end
 class BookInStock
 # YOUR CODE HERE
   def initialize(isbn, price)
-    raise ArgumentError if isbn.empty? || price<=0
+    raise ArgumentError if isbn.empty? || price <= 0
     @isbn = isbn
     @price = Float(price)
   end
